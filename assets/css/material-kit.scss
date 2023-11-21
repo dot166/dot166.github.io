@@ -10,25 +10,23 @@
  * Licensed under MIT (https://github.com/creativetimofficial/material-kit/blob/master/LICENSE.md)
  */
 
-/*@import "lineage/variables";
-@import "lineage/mixins";*/
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+@import "j/variables";
+@import "j/mixins";
 @import "j/jumbotron";
-/*@import "lineage/grid";*/
 @import "j/navbar";
 @import "j/footer";
-/*@import "lineage/buttons";
-@import "lineage/cards";
-@import "lineage/posts";
-@import "lineage/sections";
-@import "lineage/misc";
-@import "lineage/ripple";
-@import "lineage/type";
-@import "lineage/responsive";
-@import "lineage/utilities";
-@import "lineage/tables";
-@import "lineage/code"*/
+@import "j/buttons";
+@import "j/cards";
+@import "j/posts";
+@import "j/sections";
+@import "j/misc";
+@import "j/ripple";
+@import "j/type";
+@import "j/responsive";
+@import "j/utilities";
+@import "j/tables";
+@import "j/code"
