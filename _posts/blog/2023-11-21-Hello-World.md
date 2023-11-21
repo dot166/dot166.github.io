@@ -2,7 +2,8 @@
 layout: post
 title: HELLO WORLD!
 category: blog
-excerpt: Testing!. 
+excerpt: Testing!
+author: ._______166 
 ---
 
 Hello, if you can read this i got the blog feature to work!
