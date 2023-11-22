@@ -33,7 +33,7 @@
             height: 100%;
             width: 100%;
             position: absolute;
-            background-color: $white;
+            background-color: #333;
             display: block;
             content: "";
             z-index: 1;
@@ -59,7 +59,7 @@
                     display: block;
                     height: 1px;
                     margin-left: 15px;
-                    background-color: #04AA6D;
+                    background-color: $brand-primary;
                 }
 
                 &:last-child {
