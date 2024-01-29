@@ -20,11 +20,11 @@
 
     a {
       transition: all 0.3s ease-out;
-      color: $black-color;
+      color: $brand-primary;
       text-decoration: none;
 
       &:hover {
-        color: $brand-primary !important;
+        color: $brand-primary-darker !important;
       }
 
     }
