@@ -200,6 +200,7 @@
 
 .dropdown .dropbtn {
   display: block;
+  border: none;
   position: relative;
   background-color: #444;
   color: #f2f2f2;
@@ -237,6 +238,7 @@
 
 .dropdown-content a:hover {
   background-color: #680000;
+  color: white;
 }
 
 .dropdown:hover .dropdown-content {
