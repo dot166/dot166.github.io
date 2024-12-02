@@ -64,3 +64,8 @@ exclude:
 include:
   - _redirects
   - _headers
+
+collections:
+  changelogs:
+    output: true
+    permalink: /jOS/Changelogs/:path/
