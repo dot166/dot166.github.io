@@ -7,23 +7,6 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif}
 .welcome p {
   margin-bottom:1rem
 }
-/* .navbar block removed (legacy) */
-/* .navbar-brand removed (legacy) */
-/* .navbar-nav removed (legacy) */
-
-/* removed legacy .navbar-nav .nav-link rules */
-/* removed legacy .navbar-nav button override */
-/* removed legacy navbar-expand-sm responsive rule */
-/* removed legacy navbar-expand-sm layout block */
-/* removed legacy navbar-expand-md small-screen rule */
-/* removed legacy navbar-expand-md layout block */
-/* removed legacy navbar-expand-lg small-screen rule */
-/* removed legacy navbar-expand-lg layout block */
-/* removed legacy navbar-expand-xl small-screen rule */
-/* removed legacy navbar-expand-xl layout block */
-/* removed legacy .navbar-expand */
-/* removed legacy .navbar-expand .navbar-nav rule */
-/* removed legacy nav-open .navbar-collapse small-screen rule */
 .footer {
   background-color:#444;
   padding:1rem 0;
@@ -386,8 +369,6 @@ a.text-primary:focus,
 a.text-primary:hover {
   color:pink !important
 }
-/* removed legacy navbar responsive wrapper and related helpers */
-/* removed legacy navbar alignment rules for large screens */
 @media screen and (max-width: 991px) {
   @keyframes topbar-x {
     0% {
@@ -695,14 +676,12 @@ pre code {
   color:inherit;
   word-break:normal
 }
-
-/* New, compact navbar styles for `.site-navbar` */
 .site-navbar{position:fixed;top:0;left:0;right:0;z-index:1030;background:#444;color:#f2f2f2}
 .site-navbar .container{display:flex;align-items:center;justify-content:flex-start;gap:12px;padding:.5rem 1rem}
 .site-navbar .brand{font-size:1.125rem;text-decoration:none;color:inherit;margin-right:12px}
 .site-navbar .nav-toggle{display:none;background:transparent;border:0;color:inherit;cursor:pointer;padding:.4rem}
-.site-navbar .hamburger{display:block;width:22px;height:2px;background:#fff;position:relative}
-.site-navbar .hamburger::before,.site-navbar .hamburger::after{content:"";position:absolute;left:0;width:22px;height:2px;background:#fff}
+.site-navbar .hamburger{display:block;width:22px;height:2px;background:currentColor;position:relative}
+.site-navbar .hamburger::before,.site-navbar .hamburger::after{content:"";position:absolute;left:0;width:22px;height:2px;background:currentColor}
 .site-navbar .hamburger::before{top:-6px}
 .site-navbar .hamburger::after{bottom:-6px}
 .site-navbar .nav-links{display:flex;gap:12px;list-style:none;margin:0;padding:0;margin-left:0}
