@@ -1,0 +1,23 @@
+---
+layout: post
+title: UTAU Sidequest
+category: blog
+excerpt: a change from the usual AOSP rants here
+author: "._______166"
+---
+
+Recently, I went on a few random sidetracks and ended up writing some tools for UTAU, Yes, That UTAU, And discovered some things.
+<br>
+This side project came about after I wrote a VocaDB metadata/YT-DLP wrapper tool for vocaloid songs, And I saw that I had OpenUTAU on my laptop from when I tried to get my computer to talk the last time (long story, It did not sound that good).
+<br>
+So I got a different voicebank (<a href="https://utau.fandom.com/wiki/Momo_Momone?fandom=allow">Momone Momo</a>, Sorry about the fandom link, I couldn't find a better resource) and realised an issue: Momo (unlike Teto) is JP only, And (surprise) I don't speak Japanese. Luckily, OpenUTAU has a solution: a built-in EN-to-JP phonemizer.
+<br>
+And I wrote a small (at the time) script that would output note timings, Well..., That script eventually became <a href="https://github.com/dot166/misc/tree/main/UTAU/libmomone">libmomone</a> and <a href="https://github.com/dot166/misc/tree/main/UTAU/note-timings">a note timings command</a> and, At some point, <a href="https://github.com/dot166/misc/tree/main/UTAU/tts">An UTAU project generator (for TTS/Talkaloid). </a>,
+<br>
+So I thought that it was ready a week ago, I was wrong, As there was a bug in the initial version of libmomone. It used to calculate note length using the following line of Rust: <code>note_lengths.push((note.replace(".","").replace(",","").replace("?","").replace("!","").replace("'","").len()*180).max(360).to_string());</code>
+<br>
+Well, That is actually wrong, As longer words were spoken too slowly (and as you could see by the <code>.max(360)</code> bit, Shorter words were too fast), So in <a href="https://github.com/dot166/misc/commit/f91ca56fbfd59e296b62348f9d14d1a403e061f3">f91ca56fbfd59e296b62348f9d14d1a403e061f3</a> I fixed it, It now does <code>let mut note_length = (base + vowels.sqrt() * scale) as i32;</code> to calculate it, And then it snaps it to UTAU's default 60-tick grid using <code>note_length = snap_to_grid(note_length, 60);</code>
+<br>
+(Also, If you are wondering why <code>snap_to_grid()</code> does <code>((value + grid / 2) / grid) * grid</code>, It is because of rounding, It halves it, Then divides the result by the grid, Then multiplies the result of that by the grid. It works, It looks dumb, But it works.)
+<br>
+The code is <a href="https://github.com/dot166/misc/tree/main/UTAU">here</a>, It is written in Rust and was tested on Arch Linux using OpenUTAU <a href="https://github.com/stakira/OpenUtau/releases/tag/0.1.565">0.1.565</a> and <a href="https://vocadb.net/Ar/176640">桃音モモ連続音Soft (2011)</a>
