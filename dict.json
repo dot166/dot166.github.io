@@ -1,5 +1,12 @@
 [
     {
-        
+        "id": "main:en_gb",
+        "locale": "en_GB",
+        "description": "English (United Kingdom)",
+        "update": 1774044881000,
+        "filesize": 1724729,
+        "url": "https://dot166.github.io/main_en_gb.dict",
+        "version": 55,
+        "formatversion": 86736212
     }
 ]
