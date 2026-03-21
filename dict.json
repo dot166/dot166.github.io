@@ -7,7 +7,7 @@
         "filesize": 1724729,
         "checksum": "ce2ded04b5c595e32d3533775cab4049",
         "url": "https://dot166.github.io/main_en_gb.dict",
-        "version": 1774044881000,
+        "version": 29567414683,
         "formatversion": 86736212
     },
     {
@@ -18,7 +18,7 @@
         "filesize": 50715852,
         "checksum": "cf6bec16a02d956a4485e7c9db4ce2d4",
         "url": "https://dot166.github.io/mozc.data",
-        "version": 1774044881000,
+        "version": 29567414683,
         "formatversion": 86736212
     }
 ]
